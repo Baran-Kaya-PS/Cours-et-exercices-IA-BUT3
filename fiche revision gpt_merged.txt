@@ -1,0 +1,8 @@
+Je t'ai donné ce PDF pour plusieurs raisons 
+Je vais y aller étape par étape, d'abord commençons, j'aimerais que tu pointe toutes les erreurs sur les fonctions que j'ai écris dans les fichiers Ipynib en utilisant le script python dans le fichier (le script python est tout en bas)
+
+
+
+Faire une fiche révisions avec toutes les fonctions, ce qu'il y a en entrée et le type des arguments, leur signification et la signification de la fonction, 
+
+m'aider a comprendre ce que je fais dans ces TP et ensuite me donner des éléments de compréhension et comment maitriser tout ce que je t'ai donné
