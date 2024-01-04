@@ -1,0 +1,83 @@
+| Urgent et Important | Non-Urgent mais Important |
+|---------------------|---------------------------|
+| - K plus proches voisins (k-nearest neighbors) | - SVM : Machines à vecteurs de Support (Support Vector Machines) |
+| - Arbre de décision : Decision tree | - Modèles linéaires : Régression Logistique, SVM (Support Vector Machine) |
+| | - Modèles Non linéaires : Arbres de décision, Forêts aléatoires, K-Nearest Neighbours, Kernel SVM, Naïve Bayes |
+
+| Urgent mais Non-Important | Non-Urgent et Non-Important |
+|---------------------------|-----------------------------|
+| (Aucune information spécifique pour cette catégorie) | (Aucune information spécifique pour cette catégorie) |
+
+
+| Urgent et Important | Non-Urgent mais Important |
+|---------------------|---------------------------|
+| - Le Dataset | - Le modèle |
+| - La fonction coût | - L’algorithme d’apprentissage (minimisation du coût) |
+| - Sur/sous apprentissage (over/underfitting) | - Classification multiclasses |
+
+| Urgent mais Non-Important | Non-Urgent et Non-Important |
+|---------------------------|-----------------------------|
+| - Dataset IRIS : Setosa, Versicolor, Virginia | (Aucune information spécifique pour cette catégorie) |
+
+
+| Urgent et Important | Non-Urgent mais Important |
+|---------------------|---------------------------|
+| - K plus proches voisins (k-nearest neighbors) | - SVM : Machines à vecteurs de Support (Support Vector Machines) |
+| - Arbre de décision : Decision tree | - Régularisation : Lasso (L1), ElasticNet (Lasso+Ridge) |
+
+| Urgent mais Non-Important | Non-Urgent et Non-Important |
+|---------------------------|-----------------------------|
+| (Aucune information spécifique pour cette catégorie) | (Aucune information spécifique pour cette catégorie) |
+
+exercices :
+## Objectifs d'Implémentation des Algorithmes de Machine Learning
+
+### 1. Implémentation des Algorithmes
+
+#### a. K plus proches voisins (k-nearest neighbors)
+- [ ] Comprendre le principe de base de l'algorithme.
+- [ ] Implémenter l'algorithme à partir de zéro.
+- [ ] Tester l'algorithme sur des datasets variés.
+
+#### b. SVM (Support Vector Machines)
+- [ ] Comprendre la théorie derrière les SVM.
+- [ ] Implémenter l'algorithme SVM.
+- [ ] Explorer les différents noyaux (linear, polynomial, RBF) et leurs impacts.
+
+#### c. Arbre de décision (Decision Tree)
+- [ ] Comprendre le processus de division basé sur l'entropie ou le gain d'information.
+- [ ] Implémenter l'algorithme d'arbre de décision.
+- [ ] Optimiser l'algorithme pour éviter l'overfitting.
+
+#### d. Modèles linéaires
+- [ ] Implémenter la régression logistique.
+- [ ] Comprendre et implémenter la régularisation (L1, L2).
+
+#### e. Modèles Non linéaires
+- [ ] Implémenter les arbres de décision et les forêts aléatoires.
+- [ ] Explorer d'autres algorithmes comme K-Nearest Neighbours, Kernel SVM, Naïve Bayes.
+
+### 2. Objectifs Supplémentaires
+
+#### a. Validation et Évaluation
+- [ ] Mettre en place une validation croisée pour évaluer les performances des modèles.
+- [ ] Explorer différentes métriques d'évaluation en fonction du type de problème (classification, régression).
+
+#### b. Optimisation des Hyperparamètres
+- [ ] Utiliser des techniques comme la recherche sur grille (Grid Search) pour trouver les meilleurs hyperparamètres pour chaque algorithme.
+
+#### c. Exploration de Datasets
+- [ ] Trouver et travailler avec différents datasets pour tester la robustesse et la généralisation des algorithmes.
+
+#### d. Visualisation
+- [ ] Visualiser les résultats et les performances des algorithmes à l'aide de bibliothèques comme Matplotlib ou Seaborn.
+
+#### e. Veille Technologique
+- [ ] Rester à jour avec les dernières recherches et tendances en machine learning.
+- [ ] Explorer l'implémentation d'algorithmes plus avancés ou émergents.
+
+#### f. Collaboration et Partage
+- [ ] Collaborer avec d'autres passionnés ou experts en machine learning.
+- [ ] Partager vos implémentations et découvertes sur des plateformes comme GitHub ou des blogs spécialisés.
+
+

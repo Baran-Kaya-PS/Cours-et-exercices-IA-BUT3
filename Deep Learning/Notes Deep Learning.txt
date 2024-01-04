@@ -1,0 +1,11 @@
+Niveau 3 (Modérément Difficile)
+Écrivez un script Python utilisant regex pour extraire toutes les URLs d'un texte.
+Comment le web scraping peut-il être utilisé pour la collecte de données pour l'analyse de sentiments?
+Expliquez le processus de tokenisation en traitement automatique du langage naturel.
+Quels sont les défis de l'utilisation des API pour l'analyse de données?
+Décrivez un cas d'utilisation complexe de BeautifulSoup pour l'extraction de données structurées.
+Comment pourrait-on utiliser regex pour analyser et extraire des données à partir de fichiers logs complexes?
+Discutez des méthodes pour éviter d'être bloqué lors du scraping de sites web.
+Expliquez comment on pourrait structurer un JSON pour représenter une structure de données complexe, comme un graphe.
+Écrivez un script Python pour interroger une API et traiter les erreurs de manière robuste.
+Comment les expressions régulières peuvent-elles aider dans l'analyse de grandes quantités de données textuelles?
