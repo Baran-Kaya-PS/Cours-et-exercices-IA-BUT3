@@ -1,0 +1,112 @@
+critères évaluations
+comment évaluer les performances du modèle appris ?
+- réponse : en utilisant des critères d'évaluation tel que :
+    - la précision
+    - le rappel
+    - le F1-score
+    - la courbe ROC
+    - la courbe PR
+    - la matrice de confusion
+    - etc.
+
+comment savoir quel modèle utiliser
+ - réponse : en sachant quel est le problème à résoudre
+    - problème de classification : utiliser un modèle de classification
+    - problème de régression : utiliser un modèle de régression
+    - problème de clustering : utiliser un modèle de clustering
+    - etc.
+
+le dataset est divisé en 2 parties :
+    - une partie pour l'apprentissage %80
+    - une partie pour le test %20
+
+on travaille sur des données que l'on a jamais vu
+
+ne pas oublier de split les données en 2 parties :
+    - une partie pour l'apprentissage x_train, y_train
+    - une partie pour le test x_test, y_test
+    en python on utilise la fonction train_test_split() du module sklearn.model_selection
+    model.fit(x_train, y_train)
+    model.predict(x_test,y_test)
+
+    X = observations, l'observation c'est une ligne du dataset
+    y = labels, le label c'est la valeur de la colonne à prédire en fonction des valeurs des autres colonnes
+
+    le but est que via X on trouve une fonction f qui permet de prédire y
+    y = f(X)
+
+    comment on choisit lse 80%,20% ? voici un exemple de code :
+    from sklearn.model_selection import train_test_split
+    x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2,random_state=5)
+    l'interet d'utiliser le meme subset via le meme seed est de pouvoir comparer les résultats de plusieurs modèles et de choisir le meilleur
+
+    comment on évalue les métriques de l'évaluation ?
+    quelles métriques utiliser, classification, régression, clustering ?
+    pour choisir les métriques il faut savoir quel est le problème à résoudre, voici 3 problèmes :
+    - problème de classification : on veut prédire une classe, on utilise les métriques de classification
+    - problème de régression : on veut prédire une valeur, on utilise les métriques de régression
+    - problème de clustering : on veut prédire une classe, on utilise les métriques de classification
+    le clustering c'est de la classification n-classes
+
+    métriques accuracy précision et rappel : compter le nombre d'exmple de test bien classés et mal classé via la matrice de confusion
+
+    la matrice de confusion est une matrice qui permet de compter le nombre d'exemples bien classés et mal classés
+    vrai positif = bien classé car le vrai est vrai
+    vrais négatifs = bien classé car le faux est faux
+    faux positif = mal classé car le faux est vrai
+    faux négatif = mal classé car le vrai est faux
+    précision = vrai positif / (vrai positif + faux positif)
+    rappel = vrai positif / (vrai positif + faux négatif)
+    F1_score = 2 * (précision * rappel) / (précision + rappel)
+    accuracy = (vrai positif + vrais négatifs) / (vrai positif + vrais négatifs + faux positif + faux négatif)
+
+    MAE = mean absolute error = moyenne des erreurs absolues
+    formule = 1/n * somme(abs(y_test - y_pred)) en gros on fait la moyenne des erreurs absolues
+
+    MSE = mean squared error = moyenne des erreurs au carré
+    formule = 1/n * somme((y_test - y_pred)²) en gros on fait la moyenne des erreurs au carré
+
+    RMSE = root mean squared error = racine carré de la moyenne des erreurs au carré
+    formule = sqrt(MSE) en gros on fait la racine carré de la moyenne des erreurs au carré
+
+    Pour MAE,MSE,RMSE plus la valeur est faible plus le modèle est bon
+    les 3 servent à la même chose, à évaluer la qualité du modèle
+
+    Coefficient R2 = 1 - (somme((y_test - y_pred)²) / somme((y_test - y_test_moyen)²))
+    en gros on fait 1 - (MSE / variance de y_test)
+
+    R2 élevé = bon modèle
+    R2 faible = mauvais modèle
+
+    en python pour mesurer les données on utilise sklearn.metrics
+    on peux importrer accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, mean_absolute_error, mean_squared_error, r2_score
+    on utilise ces fonctions en passant en paramètre y_test et y_pred
+
+    et pour les matrices de confusion on utilise la fonction confusion_matrix(y_test, y_pred)
+    et on l'affiche avec confusionMatrixDisplay(confusion_matrix(y_test, y_pred)).plot()
+
+    Validation Croisée (Cross Validation)
+
+    étapes de la validation croisée K-fold :
+    - on divise le dataset en K parties
+    - on entraine le modèle sur K-1 parties
+    - on teste le modèle sur la partie restante
+    - on répète l'opération K fois en changeant la partie de test à chaque fois
+    - on calcule la moyenne des K résultats
+    - on obtient un résultat plus fiable que la validation simple
+
+    en gros si K=5 on coupe le dataset en 5 fois et ensuite on le valide pour le K1,K2,K3 etc... jusqu'à K5
+
+    ça permet de valider le modèle sur plusieurs parties du dataset et de voir si le modèle est bon ou pas
+    pour rappel le model c'est :
+    - l'algorithme
+    - les hyperparamètres (qui sont les paramètres de l'algorithme)
+    - les données
+
+    en python la cross validation se fait via la fonction
+    cross_val_score(model, X, y, cv=5, scoring='accuracy')
+
+    on évite de trop faire de cross validation car ça prend du temps soit le temps de base fois k
+    après on peux le faire en multi-thread pour accélérer le processus ou sur plusieurs machines en parallèle
+
+    bref on récupère le score avec la somme de la moyenne des performances de chaque partie du dataset
